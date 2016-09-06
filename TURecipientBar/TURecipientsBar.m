@@ -356,6 +356,7 @@ void *TURecipientsSelectionContext = &TURecipientsSelectionContext;
 
 - (void)_init
 {
+    _shouldFadeOutTextInput = YES;
     _showsAddButton = YES;
 	_showsShadows = YES;
     _animatedRecipientsInAndOut = YES;
@@ -816,7 +817,9 @@ void *TURecipientsSelectionContext = &TURecipientsSelectionContext;
         for (UIView *recipientView in _recipientViews) {
             recipientView.alpha = 0.0;
         }
-        _textField.alpha = 0.0;
+        if (self.shouldFadeOutTextInput) {
+            _textField.alpha = 0.0;
+        }
         _addButton.alpha = 0.0;
         
         _summaryLabel.alpha = 1.0;

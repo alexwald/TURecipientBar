@@ -82,6 +82,8 @@
  */
 @property (nonatomic, readonly) UITextField *textField;
 
+@property (nonatomic) BOOL shouldFadeOutTextInput;
+
 @property (nonatomic, readonly) UIView *lineView;
 
 @property (nonatomic, readonly) UIButton *addButton;
